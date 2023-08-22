@@ -7,11 +7,11 @@ import "./App.css";
 import { useMyContext } from "./context";
 
 function App() {
-  const { showModal } = useMyContext();
+  const { showModal, favourite } = useMyContext();
   return (
     <main className="App">
       <Search />
-      <Favourite />
+      {favourite.length > 0 && <Favourite />}
       <Meals />
       {showModal && <Modal />}
     </main>

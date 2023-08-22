@@ -2,7 +2,7 @@ import React from "react";
 import { useMyContext } from "../context";
 import { AiOutlineLike } from "react-icons/ai";
 function Meals() {
-  const { meals, loading, selectMeals } = useMyContext();
+  const { meals, loading, selectMeals, addToFav } = useMyContext();
 
   if (loading) {
     return (
@@ -37,7 +37,7 @@ is, it means that no meals matched the searched term, and a message is displayed
             />
             <footer>
               <h5>{title}</h5>
-              <button className="like-btn">
+              <button className="like-btn" onClick={() => addToFav(idMeal)}>
                 <AiOutlineLike />
               </button>
             </footer>

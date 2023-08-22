@@ -19,7 +19,7 @@ function Modal() {
 
           <p>Cooking Instructions</p>
           <p>{text}</p>
-          <a href={source} target="_blank">
+          <a href={source} target="no-target-blank">
             Original Source
           </a>
           <button className="btn btn-hipster close-btn" onClick={closeModal}>
