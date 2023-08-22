@@ -63,7 +63,6 @@ export function AppProvider({ children }) {
     setLoading(true);
     try {
       const { data } = await axios.get(url);
-      console.log(data);
       if (data.meals) {
         setMeals(data.meals);
       } else {
